@@ -30,7 +30,6 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
                         <td>Cisse</td>
                         <td>Medy</td>
                         <td>Thiès</td>
@@ -40,7 +39,6 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>2</td>
                         <td>Dieye</td>
                         <td>Lamine</td>
                         <td>Thiès</td>
@@ -50,7 +48,6 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>3</td>
                         <td>Fall</td>
                         <td>Mbaw</td>
                         <td>Thiès</td>

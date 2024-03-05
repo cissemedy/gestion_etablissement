@@ -15,15 +15,6 @@ class ResponsableController extends Controller
     {
         return view('responsable.ajouter');
     }
-    public function supprimer_responsable()
-    {
-        return view('responsable.supprimer');
-    }
-    public function modifier_responsable()
-    {
-        return view('responsable.modifier');
-    }
-
     public function ajouter_responsable_traitement(Request $request)
     {
         $request->validate([
