@@ -35,6 +35,7 @@
                         <td>Medy</td>
                         <td>Thiès</td>
                         <td>cissemedy66@gmail.com</td>
+                        <td>7799064 09</td>
                         <td>
                             
                         </td>
@@ -45,7 +46,7 @@
                         <td>Lamine</td>
                         <td>Thiès</td>
                         <td>laminedieye66@gmail.com</td>
-                        
+                        <td>77 980 66 09</td>
                         <td>
                         </td>
                     </tr>

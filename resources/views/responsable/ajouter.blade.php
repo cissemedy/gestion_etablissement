@@ -47,8 +47,8 @@
     <input type="text" class="form-control" id="E-mail" name="E-mail">
   </div>
   <div class="form-group">
-    <label for="Numero">Numero</label>
-    <input type="Number" class="form-control" id="1" name="Numero">
+    <label for="telephone">Numero</label>
+    <input type="tel" class="form-control" id="telephone" name="Numero">
   </div>
   <br>
   <button type="submit" class="btn btn-primary">Ajouter</button>
