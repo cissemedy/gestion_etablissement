@@ -18,6 +18,7 @@
             <hr>
             <table class="table">
                 <thead>
+
                     <tr>
                         <th>#</th>
                         <th>Nom</th>
@@ -30,10 +31,19 @@
                 </thead>
                 <tbody>
                     <tr>
+                      <th>Nom</th>
+                      <th>prenom</th>
+                      <th>Adresse</th>
+                      <th>E-mail</th>
+                      <th>Numero</th>
+                    </tr>
+                    <tr>
+                      
                         <td>Cisse</td>
                         <td>Medy</td>
                         <td>Thiès</td>
                         <td>cissemedy66@gmail.com</td>
+                        <td>66</td>
                         <td>
                             
                         </td>
@@ -43,6 +53,7 @@
                         <td>Lamine</td>
                         <td>Thiès</td>
                         <td>laminedieye66@gmail.com</td>
+                        <td>18</td>
                         
                         <td>
                         </td>
@@ -52,7 +63,7 @@
                         <td>Mbaw</td>
                         <td>Thiès</td>
                         <td>mbawfall@gmail.com</td>
-                        <td>77 923 54 76</td>
+                        <td>11</td>
                         <td>
                             
                         </td>
