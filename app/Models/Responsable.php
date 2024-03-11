@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Responsable extends Model
+class responsable extends Model
 {
     use HasFactory;
-    protected $fiable= [
-        'Nom',
-        'Prenom',
-        'Adresse',
-        'E-mail',
-        'Numero',
+    protected $fillable= [
+        'nom',
+        'prenom',
+        'adresse',
+        'E_mail',
+        'numero',
     ];
 }

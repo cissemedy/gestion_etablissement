@@ -9,6 +9,7 @@
   <body>
     
   <div class="container">
+    <h1>Modifier un responsable</h1>
 
       <div class="row">
        <div class="col s12">
@@ -29,30 +30,31 @@
       
         @endforeach
       </ul>
-    <form action="/ajouter/traitement" method="POST" class="form-group">
+    <form action="/update/traitement" method="POST" class="form-group">
       @csrf
+      <input type="text" name="id" style="display:none" value="{{$responsable->}}"
       <div class="form-group">
         <label for="">Nom :</label>
-        <input type="text" class="form-control" id="" name="nom">
+        <input type="text" class="form-control" id="" name="nom" value="{{$responsable->nom}}">
       </div>
       <div class="form-group">
         <label for="">Prenom :</label>
-        <input type="text" class="form-control" id="" name="prenom">
+        <input type="text" class="form-control" id="" name="prenom" value="{{$responsable->prenom}}">
       </div>
       <div class="form-group">
         <label for="">Adresse :</label>
-        <input type="text" class="form-control" id="" name="adresse">
+        <input type="text" class="form-control" id="" name="adresse" value="{{$responsable->adresse}}">
       </div>
       <div class="form-group">
         <label for="">E-mail</label>
-        <input type="text" class="form-control" id="" name="E_mail">
+        <input type="text" class="form-control" id="" name="E_mail" value="{{$responsable->E_mail}}">
       </div>
       <div class="form-group">
         <label for="">Numéro :</label>
-        <input type="numero" class="form-control" id="" name="numero" >
+        <input type="numero" class="form-control" id="" name="numero" value="{{$responsable->numero}}">
       </div>
       <br>
-      <button type="submit" class="btn btn-primary">Ajouter un responsable</button>
+      <button type="submit" class="btn btn-primary">Modifier un responsable</button>
   
   <br></br>
 
