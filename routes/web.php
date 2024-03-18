@@ -38,3 +38,13 @@ Route::post('/ajouter/traitement', [ApprenantController::class, 'ajouter_apprena
 
 
 
+
+Route::get('/', function ()
+{
+    return view('layout');
+});
+
+Route::get('/index', function ()
+{
+    return view('index');
+});

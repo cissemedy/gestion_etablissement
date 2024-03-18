@@ -10,7 +10,7 @@
 <body>
  
 
-<div class="container text-center">
+<div class="container text">
   <div class="row">
         
         <h3 class="text-center">La Modification des Apprenants</h3>

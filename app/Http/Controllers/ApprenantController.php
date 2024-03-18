@@ -11,6 +11,10 @@ class ApprenantController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+     public function index_apprenant(){
+        return view("apprenants.index");
+     }
     public function detail_apprenant(Apprenant $request)
     {
          dd($request);
@@ -19,7 +23,7 @@ class ApprenantController extends Controller
 
     public function liste_apprenant()
     {
-        $apprenants = Apprenant::paginate(12);
+        $apprenants = Apprenant::paginate(5);
         return view("apprenants.liste", compact('apprenants'));
     }
 
