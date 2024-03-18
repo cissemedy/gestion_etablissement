@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ResponsableController;
+use App\Http\Controllers\ProfesseurController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +22,8 @@ Route::post('/ajouter/traitement',[ResponsableController::class,'ajouter_respons
 Route::get('/supprimer',[ResponsableController::class,'supprimer_responsable']);
 Route::post('/modifier',[ResponsableController::class,'modifier_responsable']);
 
-
+// Route::get('/', function () {
+//     return view('layout');
+// });
+Route::resource("/professeur", ProfesseurController::class);
 
