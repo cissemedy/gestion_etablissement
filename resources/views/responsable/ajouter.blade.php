@@ -36,20 +36,20 @@
         <input type="text" class="form-control" id="" name="nom">
       </div>
       <div class="form-group">
-        <label for="">Prenom :</label>
+        <label for="nom">Prenom :</label>
         <input type="text" class="form-control" id="" name="prenom">
       </div>
       <div class="form-group">
-        <label for="">Adresse :</label>
-        <input type="text" class="form-control" id="" name="adresse">
+        <label for="adresse">Adresse :</label>
+        <input type="text" class="form-control" id="adresse" name="adresse">
       </div>
       <div class="form-group">
         <label for="">E-mail</label>
-        <input type="text" class="form-control" id="" name="E_mail">
+        <input type="text" class="form-control" id="e-mail" name="E_mail">
       </div>
       <div class="form-group">
         <label for="">Numéro :</label>
-        <input type="numero" class="form-control" id="" name="numero" >
+        <input type="numero" class="form-control" id="numero" name="numero" >
       </div>
       <br>
       <button type="submit" class="btn btn-primary">Ajouter un responsable</button>

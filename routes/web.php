@@ -14,17 +14,20 @@ use App\Http\Controllers\ResponsableController;
 |
 */
 
+Route::get('/delete-responsable/{id}',[ResponsableController::class,'delete_responsable']);
 Route::get('/update-responsable/{id}',[ResponsableController::class,'update_responsable']);
 Route::post('/update/traitement',[ResponsableController::class,'update_responsable_traitement']);
-
-
-Route::get('/responsable',[ResponsableController::class,'liste_responsable']);
+Route::get('/responsable', [ResponsableController::class,'liste_responsable' ]);
 Route::get('/ajouter',[ResponsableController::class,'ajouter_responsable']);
 Route::get('/ajouter-responsable/{id}',[ResponsableController::class,'ajouter_responsable']);
 Route::post('/ajouter/traitement',[ResponsableController::class,'ajouter_responsable_traitement']);
 
-Route::get('/layout',[ResponsableController::class,'layout']);
+Route::get('/', function () {
+    return view('layout');
+});
 
-
+Route::get('/index', function () {
+    return view('index');
+});
 
 

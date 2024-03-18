@@ -7,14 +7,17 @@ use App\Models\Responsable;
 
 class ResponsableController extends Controller
 {
+    public function index_responsable(){
+        return view("responsable.index");
+    }
 
     
     public function liste_responsable()
     {
-        $responsables = Responsable::all();
+        $responsables = Responsable::orderBy('id')->paginate(5);
         return view('responsable.liste',compact('responsables'));
     }
-    public function ajouter_responsable()
+    public function ajouter_responsable() 
     {
         return view('responsable.ajouter');
     }
@@ -34,11 +37,12 @@ class ResponsableController extends Controller
         $responsable->E_mail = $request->E_mail;
         $responsable->numero = $request->numero;
         $responsable->save();
+
         return redirect('/ajouter')->with('status','L\'responsable a bien été ajouté avec succés');
     }
     public function update_responsable($id){
         $responsables = Responsable::find($id);
-        return view('responsable.update', compact('responsable'));
+        return view('responsable.update',compact('responsables'));
     }
     public function update_responsable_traitement(Request $request){
         $request->validate([
@@ -55,7 +59,14 @@ class ResponsableController extends Controller
         $responsable->E_mail = $request->E_mail;
         $responsable->numero = $request->numero;
         $responsable->update();
-        return redirect('/responsable')->with('status','L\'responsable a bien été modifier avec succés');
+        return redirect('/responsable')->with('status','L\'responsable a bien été modifier avec succés.');
 
     }
+    public function delete_responsable($id){
+        $responsable = Responsable::find($id);
+        $responsable->delete();
+        return redirect('/responsable')->with('status','L\'responsable a bien été supprimé avec succés.');
+
+    }
+    
 }
