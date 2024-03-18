@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ResponsableController;
+use App\Http\Controllers\ProfesseurController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,5 +30,6 @@ Route::get('/', function () {
 Route::get('/index', function () {
     return view('index');
 });
+
 
 
