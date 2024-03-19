@@ -28,7 +28,7 @@
         <li class="alert alert-danger"> {{$error}} </li>
       </ul>
       @endforeach
-    <form action="/ajoute/traitement" method="POST" class="form-group">
+    <form action="/ajouter/traitement" method="POST" class="form-group">
       @csrf
     <div class="form-group">
     <label for="Nom">Nom</label>
