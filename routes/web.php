@@ -28,5 +28,13 @@ Route::get('/niveau', [NiveauController::class, 'liste_niveau']);
 Route::get('/ajoute',[NiveauController::class,'ajoute_niveau']);
 Route::post('/ajoute/traitement',[NiveauController::class,'ajoute_niveau_traitement']);
 
+Route::get('/', function ()
+{
+    return view('layout');
+});
 
+Route::get('/index', function ()
+{
+    return view('index');
+});
 

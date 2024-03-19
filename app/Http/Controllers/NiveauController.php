@@ -8,6 +8,11 @@ use Illuminate\View\View;
 
 class NiveauController extends Controller
 {   
+
+    public function index_niveau(){
+        return view('niveaux.index');
+    }
+
     public function liste_niveau()
     {
         $niveaux = Niveau::all();
