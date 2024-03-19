@@ -1,5 +1,5 @@
 @extends('layout')
-@section('content')
+@section('container')
 
         <div class="card m-2">
             <div class="card-header"><a href="/professeur" class="m-2 text-dark" title="Retour">

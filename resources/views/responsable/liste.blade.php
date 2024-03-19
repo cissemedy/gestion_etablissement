@@ -18,7 +18,7 @@
        <div class="col s12">
         <h1>Gestion établissement</h1>
         <hr>
-        <button type="" class="btn btn-dark" type="button">Liste des responsables</button>                            
+        <a href="/ajouter" class="btn btn-dark">ajoute responsables</a>                            
         <hr>
         @if (session('status'))
           <div class="alert alert-success">

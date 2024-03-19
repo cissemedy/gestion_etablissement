@@ -7,11 +7,7 @@ use App\Models\Responsable;
 
 class ResponsableController extends Controller
 {
-    public function index_responsable(){
-        return view("responsable.index");
-    }
-
-    
+   
     public function liste_responsable()
     {
         $responsables = Responsable::orderBy('id')->paginate(5);

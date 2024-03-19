@@ -1,5 +1,18 @@
-@extends('layout')
-@section('content')
+ @extends('layout')
+@section('container')
+       
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
 
         <div class="card m-2">
             <div class="card-header"><a href="/professeur" class="m-2 text-black" title="Retour">
@@ -24,4 +37,5 @@
                 </div>
             </div>
         </div>
-@stop
+        @endsection
+       
