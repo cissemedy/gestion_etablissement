@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ResponsableController;
-use App\Http\Controllers\NiveauController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,25 +15,11 @@ use App\Http\Controllers\NiveauController;
 */
 
 Route::get('/responsable',[ResponsableController::class,'liste_responsable']);
-Route::get('/ajoute',[ResponsableController::class,'ajoute_responsable']);
-Route::post('/ajoute/traitement',[ResponsableController::class,'ajoute_responsable_traitement']);
+Route::get('/ajouter',[ResponsableController::class,'ajouter_responsable']);
+Route::post('/ajouter/traitement',[ResponsableController::class,'ajouter_responsable_traitement']);
 
-Route::get('/delete-niveau/{id}', [NiveauController::class, 'delete_niveau']);
-Route::get('/update-niveau/{id}', [NiveauController::class, 'update_niveau']);
-Route::post('/update/traitement',[NiveauController::class,'update_niveau_traitement']);
+Route::get('/supprimer',[ResponsableController::class,'supprimer_responsable']);
+Route::post('/modifier',[ResponsableController::class,'modifier_responsable']);
 
 
-Route::get('/niveau', [NiveauController::class, 'liste_niveau']);
-Route::get('/ajoute',[NiveauController::class,'ajoute_niveau']);
-Route::post('/ajoute/traitement',[NiveauController::class,'ajoute_niveau_traitement']);
-
-Route::get('/', function ()
-{
-    return view('layout');
-});
-
-Route::get('/index', function ()
-{
-    return view('index');
-});
 
