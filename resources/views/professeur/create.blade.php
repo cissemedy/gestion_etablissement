@@ -1,19 +1,18 @@
- @extends('layout')
-@section('container')
-       
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     
-</body>
-</html>
-
+@extends('layout')
+@section('container')
         <div class="card m-2">
             <div class="card-header"><a href="/professeur" class="m-2 text-black" title="Retour">
                 <i class="fas fa-arrow-left"></i></a>Ajouter un professeur</div>
@@ -38,4 +37,7 @@
             </div>
         </div>
         @endsection
-       
+    </body>
+</html>
+
+        

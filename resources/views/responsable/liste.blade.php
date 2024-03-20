@@ -15,10 +15,14 @@
     <div class="container text-center">
 
       <div class="row">
-       <div class="col s12">
-        <h1>Gestion établissement</h1>
+       <div class="card m-2">
+        <h1 class="card-header">Gestion établissement</h1><br>
         <hr>
-        <a href="/ajouter" class="btn btn-dark">ajoute responsables</a>                            
+        <a href="/ajout" class="btn btn-primary  mb-3">ajoute responsables
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
+        </svg>
+        </a>                            
         <hr>
         @if (session('status'))
           <div class="alert alert-success">
@@ -26,7 +30,7 @@
           </div>
         @endif
             <table class="table table-striped">
-              <thead class="table-dark">
+              <thead class="table-light">
                 <tr>
                 <th>#</th>
                 <th>Nom</th>
@@ -52,13 +56,17 @@
                       <td>{{$responsable->numero}}</td>
 
                         <td>
-                        <a href="/ajouter-responsable/{id}" class="btn btn-primary me-md-2">Ajouter</a>
-                        <a href="/update-responsable/{{$responsable->id}}" class="btn btn-warning"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brush" viewBox="0 0 16 16">
-  <path d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.1 6.1 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.1 8.1 0 0 1-3.078.132 4 4 0 0 1-.562-.135 1.4 1.4 0 0 1-.466-.247.7.7 0 0 1-.204-.288.62.62 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896q.19.012.348.048c.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04M4.705 11.912a1.2 1.2 0 0 0-.419-.1c-.246-.013-.573.05-.879.479-.197.275-.355.532-.5.777l-.105.177c-.106.181-.213.362-.32.528a3.4 3.4 0 0 1-.76.861c.69.112 1.736.111 2.657-.12.559-.139.843-.569.993-1.06a3 3 0 0 0 .126-.75zm1.44.026c.12-.04.277-.1.458-.183a5.1 5.1 0 0 0 1.535-1.1c1.9-1.996 4.412-5.57 6.052-8.631-2.59 1.927-5.566 4.66-7.302 6.792-.442.543-.795 1.243-1.042 1.826-.121.288-.214.54-.275.72v.001l.575.575zm-4.973 3.04.007-.005zm3.582-3.043.002.001h-.002z"/>
-</svg>Modifier</a>
-                        <a href="/delete-responsable/{{$responsable->id}}" class="btn btn-danger"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-archive-fill" viewBox="0 0 16 16">
-  <path d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1M.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8z"/>
-</svg>Supprimer</a>
+                        <a href="/detail-responsable/{{ $responsable->id }}" class="btn btn-success btn-sm">
+        <i class="fas fa-eye text-white" aria-hidden="true"></i>
+      </a>
+      <a href="/updat-responsable/{{ $responsable->id }}" class="btn btn-info btn-sm">
+        <i class="fas fa-edit text-white" ></i>
+        </a>
+          
+        <a href="/delete-responsable/{{ $responsable->id }}" class="btn btn-danger btn-sm" title="" onclick="return confirm(&quot;Confirm delete?&quot;)">
+              <i class="fas fa-trash-alt text-white" aria-hidden="true"></i></a>
+      
+                        
 
                       </td>                   
                   </tr>

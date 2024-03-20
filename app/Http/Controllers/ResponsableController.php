@@ -10,14 +10,18 @@ class ResponsableController extends Controller
    
     public function liste_responsable()
     {
-        $responsables = Responsable::orderBy('id')->paginate(5);
+        $responsables = Responsable::paginate(5);
         return view('responsable.liste',compact('responsables'));
+    }
+    public function detaille_responsable()
+    {
+        return view('responsable.detail');
     }
     public function ajouter_responsable() 
     {
         return view('responsable.ajouter');
     }
-    public function ajouter_responsable_traitement(Request $request)
+    public function ajout_responsable_traitement(Request $request)
     {
         $request->validate([
             'nom' => 'required',
@@ -34,13 +38,13 @@ class ResponsableController extends Controller
         $responsable->numero = $request->numero;
         $responsable->save();
 
-        return redirect('/ajouter')->with('status','L\'responsable a bien été ajouté avec succés');
+        return redirect('/ajout')->with('status','L\'responsable a bien été ajouté avec succés');
     }
-    public function update_responsable($id){
+    public function updat_responsable($id){
         $responsables = Responsable::find($id);
         return view('responsable.update',compact('responsables'));
     }
-    public function update_responsable_traitement(Request $request){
+    public function updat_responsable_traitement(Request $request){
         $request->validate([
             'nom' => 'required',
             'prenom' => 'required',
@@ -55,13 +59,13 @@ class ResponsableController extends Controller
         $responsable->E_mail = $request->E_mail;
         $responsable->numero = $request->numero;
         $responsable->update();
-        return redirect('/responsable')->with('status','L\'responsable a bien été modifier avec succés.');
+        return redirect('/ajout')->with('status','L\'responsable a bien été modifier avec succés.');
 
     }
     public function delete_responsable($id){
         $responsable = Responsable::find($id);
         $responsable->delete();
-        return redirect('/responsable')->with('status','L\'responsable a bien été supprimé avec succés.');
+        return redirect('/ajout')->with('status','L\'responsable a bien été supprimé avec succés.');
 
     }
     

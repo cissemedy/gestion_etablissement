@@ -4,6 +4,8 @@ use App\Http\Controllers\ApprenantController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ResponsableController;
 use App\Http\Controllers\ProfesseurController;
+use App\Http\Controllers\NiveauController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,24 +18,17 @@ use App\Http\Controllers\ProfesseurController;
 |
 */
 
+
 Route::get('/delete-responsable/{id}',[ResponsableController::class,'delete_responsable']);
-Route::get('/update-responsable/{id}',[ResponsableController::class,'update_responsable']);
-Route::post('/update/traitement',[ResponsableController::class,'update_responsable_traitement']);
+Route::get('/detail-responsable/{id}', [ResponsableController::class, 'detail_responsable']);
+
+
+Route::get('/updat-responsable/{id}',[ResponsableController::class,'updat_responsable']);
+Route::post('/updat/traitement',[ResponsableController::class,'updat_responsable_traitement']);
 Route::get('/responsable', [ResponsableController::class,'liste_responsable' ]);
-Route::get('/ajouter',[ResponsableController::class,'ajouter_responsable']);
-Route::get('/ajouter/responsable/{id}',[ResponsableController::class,'ajouter_responsable']);
-Route::post('/ajouter/traitement',[ResponsableController::class,'ajouter_responsable_traitement']);
-
-Route::resource("/professeur", ProfesseurController::class);
-
-Route::get('/', function () {
-    return view('layout');
-});
-
-Route::get('/index', function () {
-    return view('index');
-});
-
+Route::get('/ajout',[ResponsableController::class,'ajouter_responsable']);
+Route::get('/ajout/responsable/{id}',[ResponsableController::class,'ajouter_responsable']);
+Route::post('/ajout/traitement',[ResponsableController::class,'ajout_responsable_traitement']);
 
 
 Route::get('/supprimer-apprenant/{id}', [ApprenantController::class, 'supprimer_apprenant']);
@@ -42,6 +37,7 @@ Route::get('/modifier-apprenant/{id}', [ApprenantController::class, 'modifier_ap
 Route::post('/modifier/traitement', [ApprenantController::class, 'modifier_apprenant_traitement']);
 
 Route::get('/detail-apprenant/{id}', [ApprenantController::class, 'detail_apprenant']);
+Route::post('/detail/traitement', [ApprenantController::class, 'detail_apprenant_traitement']);
 
 Route::get('/ajouter-apprenant/{id}', [ApprenantController::class, 'ajouter_apprenant']);
 Route::get('/apprenant', [ApprenantController::class, 'liste_apprenant']);
@@ -49,7 +45,18 @@ Route::get('/ajouter', [ApprenantController::class, 'ajouter_apprenant']);
 Route::post('/ajouter/traitement', [ApprenantController::class, 'ajouter_apprenant_traitement']);
 
 
+Route::resource("/professeur", ProfesseurController::class);
 
+
+
+
+Route::get('/delete-niveau/{id}', [NiveauController::class, 'delete_niveau']);
+Route::get('/update-niveau/{id}', [NiveauController::class, 'update_niveau']);
+Route::post('/update/traitement',[NiveauController::class,'update_niveau_traitement']);
+
+Route::get('/niveau', [NiveauController::class, 'liste_niveau']);
+Route::get('/ajoute',[NiveauController::class,'ajoute_niveau']);
+Route::post('/ajoute/traitement',[NiveauController::class,'ajoute_niveau_traitement']);
 
 Route::get('/', function ()
 {

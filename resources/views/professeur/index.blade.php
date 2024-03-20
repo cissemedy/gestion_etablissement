@@ -11,19 +11,24 @@
 
 @extends('layout')
 @section('container')
+<div class="container text-center">
+ 
+  <div class="row">
 
         <div class="card m-2">
-            <div class="card-header"><h2>Professeurs</h2></div>
+            <div class="card-header text-center"><h1>Professeurs</h1></div>
             <div class="card-body">
                 <a href="{{ url('/professeur/create') }}" class="btn btn-primary btn-sm" title="Ajouter Professeur">
+                    Ajouter
                     <i class="fas fa-plus" aria-hidden="true"></i>
                 </a>
-                <br/>
-                <br/>
+                <br>
+                <br>
                 <div class="table-responsive">
-                    <table class="table">
-                        <tr>
-                        <thead>
+                    <table class="table table-striped  table-bordered">
+                        
+                        <thead class="table-light">
+                            <tr>
                                 <th>Id</th>
                                 <th>Nom</th>
                                 <th>Prénom</th>
@@ -64,6 +69,8 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 @endsection
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

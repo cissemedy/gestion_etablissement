@@ -7,14 +7,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    
-  <div class="container">
+  @extends('layout')
+  @section('title')
+  @section('container')
+  <div class="container text">
 
       <div class="row">
-       <div class="col s12">
-       <div class="d-grid gap-2">
-       <button class="btn btn-primary" type="button">RESPONSABLE</button>
-      </div>
+      
+       
+      
       <hr>
 
       @if (session('status'))
@@ -29,7 +30,8 @@
       
         @endforeach
       </ul>
-    <form action="/ajouter/traitement" method="POST" class="form-group">
+      <h3 class="btn btn-primary" type="">RESPONSABLE</h3><br><br>
+    <form action="/ajout/traitement" method="POST" class="form-group">
       @csrf
       <div class="form-group">
         <label for="">Nom :</label>
@@ -60,9 +62,8 @@
 </form>
   </div>
 </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-  
-</div>
+@endsection
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
