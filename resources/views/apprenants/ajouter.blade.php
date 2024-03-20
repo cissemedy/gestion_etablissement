@@ -8,12 +8,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
- 
+@extends('layout')
+@section('container')
 
-<div class="container text">
+<div class="container">
   <div class="row">
         
-        <h3 class="text-center">La liste des Apprenants</h3>
+        <h1 class="text-center">La liste des Apprenants</h1>
 
         @if (session('status'))
             <div class="alert bg-success text-white">
@@ -27,7 +28,7 @@
 
           @endforeach
         </ul>
-        <a href="#" class="btn btn-primary  mb-3">
+        <a href="/apprenant" class="btn btn-primary  mb-3">
         Ajouter un apprenant
         </a>
         <form action="/ajouter/traitement" method="POST"  class="form-group">
@@ -84,6 +85,7 @@
 
     </div>
 </div>
+@endsection
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

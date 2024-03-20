@@ -15,9 +15,11 @@ class ApprenantController extends Controller
      public function index_apprenant(){
         return view("apprenants.index");
      }
-    public function detail_apprenant(Apprenant $request)
+
+    public function detail_apprenant()
     {
-         dd($request);
+        $apprenants = Apprenant::all();
+        return view("apprenants.detail");
     }
 
 
