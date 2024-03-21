@@ -30,7 +30,7 @@
       
         @endforeach
       </ul>
-      <h3 class="btn btn-primary" type="">RESPONSABLE</h3><br><br>
+      <h3 class="btn btn-info" type="">RESPONSABLE</h3><br><br>
     <form action="/ajout/traitement" method="POST" class="form-group">
       @csrf
       <div class="form-group">
@@ -54,7 +54,7 @@
         <input type="numero" class="form-control" id="numero" name="numero" >
       </div>
       <br>
-      <button type="submit" class="btn btn-primary">Ajouter un responsable</button>
+      <button type="submit" class="btn btn-info">Ajouter un responsable</button>
   
   <br></br>
 

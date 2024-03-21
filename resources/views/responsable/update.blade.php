@@ -22,7 +22,7 @@
       <div class="row">
        <div class="col s12">
        <div class="d-grid gap-2">
-       <button class="btn btn-primary" type="button">RESPONSABLE</button>
+       <button class="btn btn-info text-light" type="button">RESPONSABLE</button>
       </div>
       <hr>
 
@@ -65,7 +65,7 @@
         <input type="numero" class="form-control" id="" name="numero" value="{{ $responsables->numero }}">
       </div>
       <br>
-      <button type="submit" class="btn btn-primary">Modifier un responsable</button>
+      <button type="submit" class="btn btn-info text-light">Modifier un responsable</button>
   
   <br></br>
 

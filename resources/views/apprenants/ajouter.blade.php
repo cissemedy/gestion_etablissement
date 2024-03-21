@@ -8,10 +8,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-@extends('layout')
-@section('container')
+  @extends('layout')
+  @section('container')
+      
 
-<div class="container">
+<div class="container text">
   <div class="row">
         
         <h1 class="text-center">La liste des Apprenants</h1>
@@ -28,8 +29,8 @@
 
           @endforeach
         </ul>
-        <a href="/apprenant" class="btn btn-primary  mb-3">
-        Ajouter un apprenant
+        <a href="/apprenant" class="btn btn-info  mb-3">
+        Ajouter un(e) apprenant(e)
         </a>
         <form action="/ajouter/traitement" method="POST"  class="form-group">
             @csrf
@@ -75,18 +76,17 @@
             <input type="text" class="form-control" id="" placeholder="saisir votre etablissement" name="universite_id">
           </div>
           <br>
-          <button type="submit" class="btn btn-primary">Ajouter un apprenant</button>
+          <button type="submit" class="btn btn-info">Ajouter un apprenant</button>
 
           <br> </br>
           
-          <a href="/apprenant" class="btn btn-danger">Revenir a la liste des apprenants</a>
+          <a href="/apprenant" class="btn btn-secondary">Revenir a la liste des apprenants</a>
         </form>
 
 
     </div>
 </div>
 @endsection
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

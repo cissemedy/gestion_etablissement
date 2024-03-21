@@ -36,7 +36,8 @@ Route::get('/modifier-apprenant/{id}', [ApprenantController::class, 'modifier_ap
 Route::post('/modifier/traitement', [ApprenantController::class, 'modifier_apprenant_traitement']);
 
 Route::get('/detail-apprenant/{id}', [ApprenantController::class, 'detail_apprenant']);
-Route::post('/detail/traitement', [ApprenantController::class, 'detail_apprenant_traitement']);
+Route::get('/detail-responsable/{id}', [ResponsableController::class, 'detail_responsable']);
+Route::get('/detail-niveau/{id}', [NiveauController::class, 'detail_niveau']);
 
 Route::get('/ajouter-apprenant/{id}', [ApprenantController::class, 'ajouter_apprenant']);
 Route::get('/apprenant', [ApprenantController::class, 'liste_apprenant']);
