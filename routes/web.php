@@ -19,7 +19,6 @@ use App\Http\Controllers\NiveauController;
 */
 
 
-Route::get('/delete-responsable/{id}',[ResponsableController::class,'delete_responsable']);
 Route::get('/detail-responsable/{id}', [ResponsableController::class, 'detail_responsable']);
 
 

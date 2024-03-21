@@ -63,8 +63,9 @@
         <i class="fas fa-edit text-white" ></i>
         </a>
           
-        <a href="/delete-responsable/{{ $responsable->id }}" class="btn btn-danger btn-sm" title="" onclick="return confirm(&quot;Confirm delete?&quot;)">
-              <i class="fas fa-trash-alt text-white" aria-hidden="true"></i></a>
+       
+
+        
       
                         
 
