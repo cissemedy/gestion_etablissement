@@ -13,9 +13,9 @@ class ResponsableController extends Controller
         $responsables = Responsable::paginate(5);
         return view('responsable.liste',compact('responsables'));
     }
-    public function detaille_responsable()
+    public function detail_responsable(Responsable $responsable)
     {
-        return view('responsable.detail');
+        return view('responsable.detail',compact('responsable'));
     }
     public function ajouter_responsable() 
     {
@@ -62,11 +62,6 @@ class ResponsableController extends Controller
         return redirect('/ajout')->with('status','L\'responsable a bien été modifier avec succés.');
 
     }
-    public function delete_responsable($id){
-        $responsable = Responsable::find($id);
-        $responsable->delete();
-        return redirect('/ajout')->with('status','L\'responsable a bien été supprimé avec succés.');
-
-    }
+   
     
 }
