@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Niveau;
 use Illuminate\View\View;
+use App\Models\detaille;
 
 class NiveauController extends Controller
 {   
@@ -15,7 +16,7 @@ class NiveauController extends Controller
 
     public function liste_niveau()
     {
-        $niveaux = Niveau::all();
+        $niveaux = Niveau::paginate(4);
         return view('niveaux.liste', compact('niveaux'));
     }
 
@@ -77,16 +78,29 @@ class NiveauController extends Controller
         $niveau ->master_2 = $request->master_2;
         $niveau ->doctorat = $request->doctorat;
         $niveau->update();
-        return redirect('/ajoute')->with('status', 'Le\niveau a bien été  modifié avec succes.');
+        return redirect('/ajoute')->with('status', 'Le niveau a bien été  modifié avec succes.');
 
     }
+
     public function delete_niveau($id)
     {
         $niveau = Niveau::find($id);
         $niveau->delete();
-        return redirect('/ajoute')->with('status', 'Le\niveau a bien été  supprimé avec succes.'); 
+        return redirect('/ajoute')->with('status', 'Le niveau a bien été  supprimé avec succes.'); 
 
     }
+
+    public function detaille_niveau($id)
+    {
+        $niveau = Niveau::find($id);
+        $niveau->detaille();
+        return redirect('/detail')->with('status', 'Le niveau a bien été  détaillé avec succes.'); 
+
+    }
+
+
+
+    
 
    
 }

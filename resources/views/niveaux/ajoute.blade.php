@@ -23,7 +23,7 @@
     </ul>
 
     <hr>
-    <h1  class="container text-center">Veuiller remplir les champs</h1>
+    <h1  class="container text-center">Veuiller remplire les champs</h1>
     <hr>
     <form action="/ajoute/traitement" method="POST" class="form-group">
       @csrf
@@ -34,7 +34,7 @@
             </a>
           </div>
         </nav>
-          
+        
           
           
       <div class="form-group">
@@ -43,30 +43,28 @@
         <label for="">licence 1</label>
         <input type="text" class="form-control" id="" name="licence_1">
       </div>
-    <div class="form-group">
-      <label for="">licence 2</label>
-      <input type="text" class="form-control" id="" name="licence_2">
-    </div>
-    <div class="form-group">
-      <label for="">licence 1</label>
-      <input type="text" class="form-control" id="" name="licence_3">
-    </div>
+      <div class="form-group">
+        <label for="">licence 2</label>
+        <input type="text" class="form-control" id="" name="licence_2">
+      </div>
+      <div class="form-group">
+        <label for="">licence 1</label>
+        <input type="text" class="form-control" id="" name="licence_3">
+      </div>
 
-    <div class="form-group">
-      <label for="">master 1</label>
-      <input type="text" class="form-control" id="" name="master_1">
-    </div>
-    <div class="form-group">
-      <label for="">master 2</label>
-      <input type="text" class="form-control" id="" name="master_2">
-    </div>
-    <div class="form-group">
-      <label for="">Doctorat</label>
-      <input type="text" class="form-control" id="" name="doctorat">
-    </div>
+      <div class="form-group">
+        <label for="">master 1</label>
+        <input type="text" class="form-control" id="" name="master_1">
+      </div>
+      <div class="form-group">
+        <label for="">master 2</label>
+        <input type="text" class="form-control" id="" name="master_2">
+      </div>
+      <div class="form-group">
+        <label for="">Doctorat</label>
+        <input type="text" class="form-control" id="" name="doctorat">
+      </div>
 
-    
-    
     <div>
       <br>
       <button type="submit"class="btn btn-primary">ajouter un niveu à la liste niveau</button>
