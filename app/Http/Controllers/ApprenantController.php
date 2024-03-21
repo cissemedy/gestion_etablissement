@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 //use App\Models\apprenant;
 use Illuminate\Http\Request;
 use App\Models\Apprenant;
+use Illuminate\View\View;
 
 class ApprenantController extends Controller
 {
@@ -16,12 +17,12 @@ class ApprenantController extends Controller
         return view("apprenants.index");
      }
 
-    public function detail_apprenant()
-    {
-        $apprenants = Apprenant::all();
-        return view("apprenants.detail");
-    }
-
+     public function detail_apprenant(string $id):View
+     {
+         $apprenants = Apprenant::find($id);
+         return view('apprenants.detail')->with('apprenants', $apprenants);
+     }
+ 
 
     public function liste_apprenant()
     {

@@ -18,7 +18,7 @@
         <div class="card m-2">
             <div class="card-header text-center"><h1>Professeurs</h1></div>
             <div class="card-body">
-                <a href="{{ url('/professeur/create') }}" class="btn btn-primary btn-sm" title="Ajouter Professeur">
+                <a href="{{ url('/professeur/create') }}" class="btn btn-info btn-sm" title="Ajouter Professeur">
                     Ajouter
                     <i class="fas fa-plus" aria-hidden="true"></i>
                 </a>
@@ -66,6 +66,7 @@
                         @endforeach
                         </tbody>
                     </table>
+                    {{ $professeurs->links() }} 
                 </div>
             </div>
         </div>

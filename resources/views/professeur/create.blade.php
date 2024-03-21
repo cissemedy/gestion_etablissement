@@ -14,8 +14,10 @@
 @extends('layout')
 @section('container')
         <div class="card m-2">
-            <div class="card-header"><a href="/professeur" class="m-2 text-black" title="Retour">
-                <i class="fas fa-arrow-left"></i></a>Ajouter un professeur</div>
+            <div class="card-header">
+                <a href="/professeur" class="m-2 text-black" title="Retour">
+                    <i class="fas fa-arrow-left  btn btn-info btn-sm text-bg-info mb-1 text-light">
+                        Retour</i></a><h1 class="text-center">Ajouter un(e) professeur(euse)</h1></div>
                 <div class="card-body">
                     <form action="{{ url('professeur') }}" method="post">
                         {!! csrf_field() !!}
@@ -31,7 +33,7 @@
                         <input type="text" name="email" id="email" class="form-control"></br>
                         <label>Addresse *</label></br>
                         <input type="text" name="address" id="address" class="form-control"></br>
-                        <input type="submit" value="Enregistrer" class="btn btn-primary btn-sm">
+                        <input type="submit" value="Enregistrer" class="btn btn-info text-light btn-sm">
                     </form>
                 </div>
             </div>

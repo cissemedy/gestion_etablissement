@@ -32,7 +32,7 @@
     <div id="wrapper">
 
         
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
 
             
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -54,10 +54,7 @@
             <hr class="sidebar-divider">
 
             
-            <div class="sidebar-heading">
-                Interface
-            </div>
-
+           
             
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ url('/index') }}" data-toggle="collapse" data-target="#collapseTwo"
@@ -79,9 +76,7 @@
             <hr class="sidebar-divider">
 
            
-            <div class="sidebar-heading">
-                Differentes colones
-            </div>
+          
 
              
              <li class="nav-item">
@@ -114,7 +109,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="#">
                     <i class="fas fa-school"></i>
                     <span>Fillieres</span></a>
             </li>
@@ -133,7 +128,7 @@
 
             
             <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
+                {{-- <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="..."> --}}
                 <p class="text-center mb-2"><strong>MANAGE AN ESTABLISHMENT
                     ON ITS DIFFERENT PLANS
                     (ADMINISTRATIVE,
