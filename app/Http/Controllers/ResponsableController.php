@@ -15,12 +15,16 @@ class ResponsableController extends Controller
         return view('responsable.liste',compact('responsables'));
     }
     public function detail_responsable(string $id):View
-    public function detail_responsable(Responsable $responsable)
     {
         $responsables = Responsable::find($id);
-        return view('responsable.detail')->with('responsables', $responsables);
         return view('responsable.detail',compact('responsable'));
     }
+    
+    public function delete_responsable()
+    {
+        return view('responsable.delete');
+    }
+
 
 
     public function ajouter_responsable() 
