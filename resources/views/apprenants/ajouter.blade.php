@@ -15,7 +15,7 @@
 <div class="container text">
   <div class="row">
         
-        <h3 class="text-center">La liste des Apprenants</h3>
+        <h1 class="text-center">La liste des Apprenants</h1>
 
         @if (session('status'))
             <div class="alert bg-success text-white">
@@ -29,7 +29,7 @@
 
           @endforeach
         </ul>
-        <a href="#" class="btn btn-primary  mb-3">
+        <a href="/apprenant" class="btn btn-primary  mb-3">
         Ajouter un apprenant
         </a>
         <form action="/ajouter/traitement" method="POST"  class="form-group">

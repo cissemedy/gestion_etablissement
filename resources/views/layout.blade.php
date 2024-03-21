@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,8 +12,8 @@
     <title>@yield('title')Gestion Etablissement</title>
 
 
-
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     
     <link
@@ -86,7 +85,7 @@
 
              
              <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                <a class="nav-link collapsed" href="/professeur" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-chalkboard-teacher"></i>
                     <span>Professeurs</span>
@@ -109,20 +108,20 @@
 
             
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="/responsable">
                     <i class="fas fa-marker"></i>
                     <span>Responsables</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="">
                     <i class="fas fa-school"></i>
                     <span>Fillieres</span></a>
             </li>
 
             
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="/niveau">
                     <i class="	fas fa-book-open"></i>
                     <span>Niveau d'etude</span></a>
             </li>
