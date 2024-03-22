@@ -14,9 +14,22 @@ class NiveauController extends Controller
         return view('niveaux.index');
     }
 
+    public function detail_niveau(string $id):View
+     {
+         $niveaux = Niveau::find($id);
+         return view('niveaux.detail')->with('niveaux', $niveaux);
+     }
+ 
+
     public function liste_niveau()
-    {
-        $niveaux = Niveau::paginate(4);
+   
+    }
+ 
+<<<<<<< HEAD
+        $niveaux = niveau::paginate(4);
+=======
+        $niveaux = iveau::paginate(2);
+>>>>>>> b6e0294a790b220215123f2a5384a2e333d5bf57
         return view('niveaux.liste', compact('niveaux'));
     }
 

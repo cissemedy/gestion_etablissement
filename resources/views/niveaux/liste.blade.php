@@ -8,21 +8,23 @@
     <link href="https://ajoute.blade.php">
   </head>
   <body>  
-    
+   
+  @extends('layout')
+  @section('title')
+  @section('container')
   
 <div class="container text-center">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"> 
-              <h1>GESTION ETABLISSEMENT</h1>
-            
-          </div>
-        </nav>
-        <hr>
-       
-        <span href="/ajoute"class="btn btn-primary mb-3" width="">liste des niveau existe dans l'établissement</span>
-        
   <div class="row">
+<div class="card m-2">
+    <h1 class="card-header">GESTION ETABLISSEMENT</h1><br>
+  <hr>
+   <a href="/ajoute" class="btn btn-info mb-3">Ajouter niveau
+   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
+        </svg>
+   </a>
+        
+  
 
     <div class="col s12">
       @if (session('status'))
@@ -32,7 +34,7 @@
       @endif
     </div>
       <table class="table table-striped table-bordered">
-        <thead>
+        <thead class="table-light">
           <tr>
           
             <th><h4>#</h4></th>
@@ -45,6 +47,11 @@
             <th><h4>options</h4></th>
           </tr>
         </thead>
+        @php
+        $ide = 1;
+        @endphp
+
+        
           @foreach($niveaux as $niveau)     
           <tr>    
             <td>{{$niveau->id}}</td>
@@ -56,34 +63,30 @@
             <td>{{$niveau->doctorat}}</td>
             
             <td>
+
+            <a href="/detail-niveau/{{ $niveau->id }}" class="btn btn-success btn-sm">
+        <i class="fas fa-eye text-white" aria-hidden="true"></i>
+      </a>
               
-              <a href="/update-niveau/{{ $niveau->id }}" title="modifier un niveau" class= "btn btn-success"  onclick="return confirm(&quot;voulez vous modifier cette ligne ?&quot;)"><svg xmlns="" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/></svg>
+              <a href="/update-niveau/{{ $niveau->id }}" title="modifier un niveau" class= "btn btn-info btn-sm">
+              <i class="fas fa-edit text-white" ></i>
               </a>
-              <a href="/update-niveau/{{ $niveau->id }}" title="modifier un niveau" class= "btn btn-warning"  onclick="return confirm(&quot;voulez vous modifier cette ligne ?&quot;)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
-                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/></svg>
+              <a href="delete-niveau/{{ $niveau->id }}"  class= "btn btn-danger" title="" onclick="return confirm(&quot;Confirm delete?&quot;)">
+              <i class="fas fa-trash-alt text-white" aria-hidden="true"></i>
               </a>
-              <a href="delete-niveau/{{ $niveau->id }}" title="supprimer un niveau"  class= "btn btn-danger" onclick="return confirm(&quot;voulez vous supprimer cette ligne ?&quot;)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-archive-fill" viewBox="0 0 16 16">
-                <path d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1M.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8z"/></svg>
-              </a>
-           
-              <a href="/ajoute" title="ajouter un niveau" class="btn btn-primary" onclick="return confirm(&quot;Si voulez vous ajouter quelaue chose clique sur ok Si non anuler?&quot;)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                </svg>
-              </a>
-              
             </td>
           </tr>
+          @php
+          $ide += 1;
+          @endphp
           @endforeach    
           
           
         </table> 
-         
+         {{ $niveaux->links() }} 
   </div>
 </div>
-
+@endsection
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

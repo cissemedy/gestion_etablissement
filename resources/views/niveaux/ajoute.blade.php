@@ -8,6 +8,8 @@
   </head>
   <body>
 
+  @extends('layout')
+  @section('container')
 <div class="container text">
   
   <div class="row">
@@ -67,14 +69,14 @@
 
     <div>
       <br>
-      <button type="submit"class="btn btn-primary">ajouter un niveu à la liste niveau</button>
+      <button type="submit"class="btn btn-info">ajouter un niveu à la liste niveau</button>
       <br> </br> 
-      <a href="/niveau"class="btn btn-danger">Revenir à la liste niveau</a>
+      <a href="/niveau"class="btn btn-secondary">Revenir à la liste niveau</a>
     </div>
     </form>
   </div>
 </div>
-    
+@endsection  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

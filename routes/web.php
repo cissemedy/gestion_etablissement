@@ -24,7 +24,7 @@ Route::get('/update-niveau/{id}', [NiveauController::class, 'update_niveau']);
 Route::post('/update/traitement',[NiveauController::class,'update_niveau_traitement']);
 
 Route::get('/detail',[NiveauController::class,'detail_niveau']);
-Route::post('/detail/traitement',[NiveauController::class,'detail_niveau_traitement']);
+
 
 Route::get('/niveau', [NiveauController::class, 'liste_niveau']);
 Route::get('/ajoute',[NiveauController::class,'ajoute_niveau']);
