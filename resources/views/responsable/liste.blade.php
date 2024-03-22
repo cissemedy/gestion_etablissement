@@ -8,64 +8,84 @@
   </head>
   <body>
     
+
+  @extends('layout')
+  @section('title')
+  @section('container')
     <div class="container text-center">
 
       <div class="row">
-       <div class="col s12">
-        <h1>Crud laravel 10</h1>
+       <div class="card m-2">
+        <h1 class="card-header">RESPONSABLE</h1><br>
         <hr>
-            <a href="/ajouter" class="btn btn-primary">Ajouter un responsable</a>
-            <hr>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Nom</th>
-                        <th>Prenom</th>
-                        <th>Adresse</th>
-                        <th>E-mail</th>
-                        <th>numero</th>
-                    
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Cisse</td>
-                        <td>Medy</td>
-                        <td>Thiès</td>
-                        <td>cissemedy66@gmail.com</td>
-                        <td>7799064 09</td>
+        <a href="/ajout" class="btn btn-info  mb-3">ajoute responsables
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
+        </svg>
+        </a>                            
+        <hr>
+        @if (session('status'))
+          <div class="alert alert-success">
+          {{session('status')}}
+          </div>
+        @endif
+            <table class="table table-striped">
+              <thead class="table-light">
+                <tr>
+                <th>#</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Adresse</th>
+                <th>E_mail</th>
+                <th>Numero</th>
+                <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                @php
+                 $ide = 1;
+                @endphp
+                @foreach($responsables as $responsable)
+                  <tr>
+                      <td>{{ $ide }}</td>
+                      <td>{{$responsable->nom}}</td>
+                      <td>{{$responsable->prenom}}</td>
+                      <td>{{$responsable->adresse}}</td>
+                      <td>{{$responsable->E_mail}}</td>
+                      <td>{{$responsable->numero}}</td>
+
                         <td>
-                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Dieye</td>
-                        <td>Lamine</td>
-                        <td>Thiès</td>
-                        <td>laminedieye66@gmail.com</td>
-                        <td>77 980 66 09</td>
-                        <td>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Fall</td>
-                        <td>Mbaw</td>
-                        <td>Thiès</td>
-                        <td>mbawfall@gmail.com</td>
-                        <td>77 923 54 76</td>
-                        <td>
-                            
-                        </td>
-                    </tr>
-                </tbody>
+                        <a href="/detail-responsable/{{ $responsable->id }}" class="btn btn-success btn-sm">
+        <i class="fas fa-eye text-white" aria-hidden="true"></i>
+      </a>
+      <a href="/updat-responsable/{{ $responsable->id }}" class="btn btn-info btn-sm">
+        <i class="fas fa-edit text-white" ></i>
+        </a>
+
+        <a href="/delete-responsable/{{ $responsable->id }}" class="btn btn-danger btn-sm" title="" onclick="return confirm(&quot;Confirm delete?&quot;)">
+              <i class="fas fa-trash-alt text-white" aria-hidden="true"></i></a>
+         
+       
+
+        
+      
+                        
+
+                      </td>                   
+                  </tr>
+                  @php
+                  $ide += 1;
+                  @endphp
+                @endforeach
+              </tbody>
             </table>
+            {{ $responsables->links() }}
+
         
   </div>
 </div>
+@endsection
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
