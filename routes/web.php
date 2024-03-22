@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ResponsableController;
 use App\Http\Controllers\NiveauController;
+use App\Http\Controllers\ApprenantController;
+use App\Http\Controllers\ProfesseurController;
 
 /*
 |--------------------------------------------------------------------------
