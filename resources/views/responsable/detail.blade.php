@@ -19,38 +19,24 @@
                 <div class="card-body">
                     
                
-                    <p class="card-title">Nom : {{ $responsables->nom }}</p>
-                    <p class="card-title">Prénom : {{ $responsables->prenom }}</p>
-                    <p class="card-text">Email : {{ $responsables->adresse }}</p>
-                    <p class="card-text">Addresse : {{ $responsables->E_mail }}</p>
-                    <p class="card-text">Numero : {{ $responsables->numero }}</p>
+                    <p class="card-title">Nom : {{ $responsable->nom }}</p>
+                    <p class="card-title">Prénom : {{ $responsable->prenom }}</p>
+                    <p class="card-text">Email : {{ $responsable->adresse }}</p>
+                    <p class="card-text">Addresse : {{ $responsable->E_mail }}</p>
+                    <p class="card-text">Numero : {{ $responsable->numero }}</p>
                 </div>
             </hr>
             
         </div>
-        <a href="/responsable" class="btn btn-secondary">Revenir a la liste des responsables</a>
-
+        <div class="card m-2">
+            <div class="card-header">
+                <a href="/responsable" class="m-2 text-black" title="Retour">
+                    <i class="fas fa-arrow-left  btn btn-info btn-sm text-bg-info mb-1 text-light">
+                        Retour</i></a><h1 class="text-center"></h1>
+                    </div>
         @endsection
 
             
 </body>
 </html>
 
-@extends('layout')
-@section('container')
-
-        <div class="card m-2">
-            <div class="card-header">
-                <a href="/responsable" class="m-2 text-black" title="Retour">
-                    <i class="fas fa-arrow-left"></i></a>Detail</div>
-                <div class="card-body">
-                    <h6 class="card-title"> id : {{ $responsable->id }} </h6>
-                    <h6 class="card-title"> Nom : {{ $responsable->Nom }}</h6>
-                    <h6 class="card-title"> Prénom : {{ $responsable->Prenom }}<h6>
-                    <h6 class="card-title"> adresse : {{ $responsable->adresse }}<h6>
-                    <h6 class="card-title"> E_mail : {{ $responsable->E_mail }}<h6>
-                    <h6 class="card-title"> numero : {{ $responsable->numero }}<h6>
-                </div>
-            </hr>
-        </div>
-@stop

@@ -16,7 +16,7 @@
 
       <div class="row">
        <div class="card m-2">
-        <h1 class="card-header">Gestion établissement</h1><br>
+        <h1 class="card-header">RESPONSABLE</h1><br>
         <hr>
         <a href="/ajout" class="btn btn-info  mb-3">ajoute responsables
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
@@ -62,7 +62,10 @@
       <a href="/updat-responsable/{{ $responsable->id }}" class="btn btn-info btn-sm">
         <i class="fas fa-edit text-white" ></i>
         </a>
-          
+
+        <a href="/delete-responsable/{{ $responsable->id }}" class="btn btn-danger btn-sm" title="" onclick="return confirm(&quot;Confirm delete?&quot;)">
+              <i class="fas fa-trash-alt text-white" aria-hidden="true"></i></a>
+         
        
 
         
