@@ -24,7 +24,11 @@ Route::get('/update-niveau/{id}', [NiveauController::class, 'update_niveau']);
 Route::post('/update/traitement',[NiveauController::class,'update_niveau_traitement']);
 
 Route::get('/detail',[NiveauController::class,'detail_niveau']);
-
+Route :: post ( '/modifier/traitement' , [ ApprenantController ::class, 'modifier_apprenant_traitement' ]);
+Route :: get ( '/detail-responsable/{id}' , [ ResponsableController ::class, 'detail_responsable' ]);
+Route :: get ( '/detail-niveau/{id}' , [ NiveauController ::class, 'detail_niveau' ]);
+Route :: get ( '/ajouter-apprenant/{id}' , [ ApprenantController ::class, 'ajouter_apprenant' ]);
+Route :: get ( '/apprenant' , [ ApprenantController ::class, 'liste_apprenant' ]);
 
 Route::get('/niveau', [NiveauController::class, 'liste_niveau']);
 Route::get('/ajoute',[NiveauController::class,'ajoute_niveau']);
