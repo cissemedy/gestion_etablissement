@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ResponsableController;
 use App\Http\Controllers\NiveauController;
+use App\Http\Controllers\ApprenantController;
+use App\Http\Controllers\ProfesseurController;
+use App\Http\Controllers\FilliereController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +17,14 @@ use App\Http\Controllers\NiveauController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/delete-filliere/{id}',[FilliereController::class,'delete_filliere']);
+Route::get('/update-filliere/{id}',[FilliereController::class,'update_filliere']);
+Route::post('/update/traitement',[FilliereController::class,'update_filliere_traitement']);
+Route::get('/filliere', [FilliereController::class,'liste_filliere' ]);
+Route::get('/ajouté',[FilliereController::class,'ajouté_filliere']);
+Route::get('/ajouté/filliere/{id}',[FilliereController::class,'ajouté_filliere']);
+Route::post('/ajouté/traitement',[FilliereController::class,'ajouté_filliere_traitement']);
 
 Route::get('/delete-responsable/{id}', [ResponsableController::class, 'delete_responsable']);
 
@@ -33,6 +44,7 @@ Route::post('/modifier/traitement', [ApprenantController::class, 'modifier_appre
 Route::get('/detail-apprenant/{id}', [ApprenantController::class, 'detail_apprenant']);
 Route::get('/detail-responsable/{id}', [ResponsableController::class, 'detail_responsable']);
 Route::get('/detail-niveau/{id}', [NiveauController::class, 'detail_niveau']);
+Route::get('/detail-filliere/{id}', [FilliereController::class, 'detail_filliere']);
 
 Route::get('/ajouter-apprenant/{id}', [ApprenantController::class, 'ajouter_apprenant']);
 Route::get('/apprenant', [ApprenantController::class, 'liste_apprenant']);
