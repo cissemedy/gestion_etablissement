@@ -21,7 +21,7 @@ class ProfesseurController extends Controller
 
     public function index(): View
     {
-        $professeur = Professeur::all();
+        $professeur = Professeur::paginate(3);
             return view('professeur.index')->with('professeurs', $professeur);
 
     }

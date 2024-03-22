@@ -78,9 +78,9 @@
     
     <div>
       <br>
-      <button type="submit" class="btn btn-primary">Modifier un niveu à la liste niveau</button>
+      <button type="submit" class="btn btn-info text-light">Modifier un niveu à la liste niveau</button>
       <br> </br> 
-      <a href="/niveau" class="btn btn-danger">Revenir à la liste niveau</a>
+      <a href="/niveau" class="btn btn-secondary">Revenir à la liste niveau</a>
     </div>
     </form>
   </div>

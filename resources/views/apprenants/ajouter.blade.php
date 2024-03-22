@@ -29,8 +29,8 @@
 
           @endforeach
         </ul>
-        <a href="/apprenant" class="btn btn-primary  mb-3">
-        Ajouter un apprenant
+        <a href="/apprenant" class="btn btn-info  mb-3">
+        Ajouter un(e) apprenant(e)
         </a>
         <form action="/ajouter/traitement" method="POST"  class="form-group">
             @csrf
@@ -76,11 +76,11 @@
             <input type="text" class="form-control" id="" placeholder="saisir votre etablissement" name="universite_id">
           </div>
           <br>
-          <button type="submit" class="btn btn-primary">Ajouter un apprenant</button>
+          <button type="submit" class="btn btn-info">Ajouter un apprenant</button>
 
           <br> </br>
           
-          <a href="/apprenant" class="btn btn-danger">Revenir a la liste des apprenants</a>
+          <a href="/apprenant" class="btn btn-secondary">Revenir a la liste des apprenants</a>
         </form>
 
 

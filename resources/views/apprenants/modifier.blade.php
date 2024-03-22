@@ -29,8 +29,8 @@
 
           @endforeach
         </ul>
-        <a href="#" class="btn btn-primary  mb-3">
-        Modifier un apprenant
+        <a href="#" class="btn btn-info text-light  mb-3">
+        Modifier un(e) apprenant(e)
         </a>
         <form action="/modifier/traitement" method="POST"  class="form-group">
             @csrf
@@ -78,17 +78,16 @@
             <input type="text" class="form-control" id="" placeholder="saisir votre etablissement" name="universite_id" value="{{ $apprenants->universite_id }}">
           </div>
           <br>
-          <button type="submit" class="btn btn-primary">Modifier un apprenant</button>
+          <button type="submit" class="btn btn-info text-light">Modifier un apprenant</button>
 
           <br> </br>
           
-          <a href="/apprenant" class="btn btn-danger">Revenir a la liste des apprenants</a>
+          <a href="/apprenant" class="btn btn-secondary">Revenir a la liste des apprenants</a>
         </form>
 
 
     </div>
 </div>
-@endsection
 @endsection
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

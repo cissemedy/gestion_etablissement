@@ -4,19 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Responsable;
+use Illuminate\View\View;
 
 class ResponsableController extends Controller
 {
    
     public function liste_responsable()
     {
-        $responsables = Responsable::paginate(5);
+        $responsables = Responsable::paginate(3);
         return view('responsable.liste',compact('responsables'));
     }
-    public function detaille_responsable()
+    public function detail_responsable(string $id):View
     {
-        return view('responsable.detail');
+        $responsables = Responsable::find($id);
+        return view('responsable.detail')->with('responsables', $responsables);
     }
+
+
     public function ajouter_responsable() 
     {
         return view('responsable.ajouter');
