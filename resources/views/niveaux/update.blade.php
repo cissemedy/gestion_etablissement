@@ -31,21 +31,19 @@
     </ul>
 
     <hr>
-    <h1  class="container text-center">Veuiller remplir les champs</h1>
+    <h1  class="container text-center">VEILLER REMPLIR LES CHAMPS</h1>
     <hr>
     <form action="/update/traitement" method="POST" class="form-group">
       @csrf
       <input type="text" name="id" style="display:none" value="{{$niveaux->id}}">
       <div class="container">
+        
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
             <a class="navbar-brand" href="#"><h1 class="nav text-center">Niveau</h1>
             </a>
           </div>
-        </nav>
-          
-          
-          
+        </nav>    
       <div class="form-group">
         
       <div class="form-group">
@@ -73,9 +71,6 @@
       <label for="">Doctorat</label>
       <input type="text" class="form-control" id="" name="doctorat" value="{{ $niveaux ->doctorat}}">
     </div>
-
-    
-    
     <div>
       <br>
       <button type="submit" class="btn btn-info text-light">Modifier un niveu à la liste niveau</button>

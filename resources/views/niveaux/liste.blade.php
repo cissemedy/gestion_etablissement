@@ -27,7 +27,6 @@
   
 
     <div class="col s12">
-      <hr>
       @if (session('status'))
         <div class="alert bg-success text-white">
           {{ session('status')}}
@@ -45,8 +44,7 @@
             <th><h4>Master 1</h4></th>
             <th><h4>Master 2</h4></th>
             <th><h4>Doctorat</h4></th>
-            <th><h4>Actions</h4></th>
-            
+            <th><h4>options</h4></th>
           </tr>
         </thead>
         @php
