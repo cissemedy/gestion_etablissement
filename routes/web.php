@@ -20,7 +20,7 @@ use App\Http\Controllers\FilliereController;
 
 Route::get('/delete-filliere/{id}',[FilliereController::class,'delete_filliere']);
 Route::get('/update-filliere/{id}',[FilliereController::class,'update_filliere']);
-Route::post('/update/traitement',[FilliereController::class,'update_filliere_traitement']);
+Route::post('/updatee/traitement',[FilliereController::class,'updatee_filliere_traitement']);
 Route::get('/filliere', [FilliereController::class,'liste_filliere' ]);
 Route::get('/ajouté',[FilliereController::class,'ajouté_filliere']);
 Route::get('/ajouté/filliere/{id}',[FilliereController::class,'ajouté_filliere']);
