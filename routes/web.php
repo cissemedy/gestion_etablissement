@@ -5,7 +5,10 @@ use App\Http\Controllers\ResponsableController;
 use App\Http\Controllers\NiveauController;
 use App\Http\Controllers\ApprenantController;
 use App\Http\Controllers\ProfesseurController;
+<<<<<<< HEAD
+=======
 use App\Http\Controllers\FilliereController;
+>>>>>>> 7258e94de1d922f441ffe9a1c888a21969f14163
 
 /*
 |--------------------------------------------------------------------------
