@@ -12,9 +12,9 @@ class ResponsableController extends Controller
     public function liste_responsable()
     {
         $responsables = Responsable::paginate(3);
-        return view('responsable.liste',compact('responsables'));
+        return view('responsable.liste', compact('responsables'));
     }
-    
+
     public function detail_responsable(string $id):View
     {
         $responsables = Responsable::find($id);
