@@ -18,9 +18,7 @@ use App\Http\Controllers\NiveauController;
 |
 */
 
-
-Route::get('/detail-responsable/{id}', [ResponsableController::class, 'detail_responsable']);
-
+Route::get('/delete-responsable/{id}', [ResponsableController::class, 'delete_responsable']);
 
 Route::get('/updat-responsable/{id}',[ResponsableController::class,'updat_responsable']);
 Route::post('/updat/traitement',[ResponsableController::class,'updat_responsable_traitement']);
