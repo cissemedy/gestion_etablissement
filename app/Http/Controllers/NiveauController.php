@@ -22,7 +22,7 @@ class NiveauController extends Controller
 
     public function liste_niveau(){
     
-    $niveaux = niveau::paginate(2);
+    $niveaux = Niveau::paginate(2);
             return view('niveaux.liste', compact('niveaux'));
         }
    
