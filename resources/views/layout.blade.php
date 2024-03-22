@@ -109,7 +109,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/filliere">
                     <i class="fas fa-school"></i>
                     <span>Fillieres</span></a>
             </li>

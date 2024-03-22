@@ -21,18 +21,13 @@ class NiveauController extends Controller
      }
  
 
-    public function liste_niveau()
+    public function liste_niveau(){
+
+    $niveaux = Niveau::paginate(2);
+
+        return view('niveaux.liste', compact('niveaux'));
    
     }
- 
-<<<<<<< HEAD
-        $niveaux = niveau::paginate(4);
-=======
-        $niveaux = iveau::paginate(2);
->>>>>>> b6e0294a790b220215123f2a5384a2e333d5bf57
-        return view('niveaux.liste', compact('niveaux'));
-    }
-
     public function ajoute_niveau()
     {
         return view('niveaux.ajoute'); 
