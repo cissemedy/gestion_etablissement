@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ResponsableController;
+use App\Http\Controllers\ResController;
+use App\Http\Controllers\FilliereController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +15,18 @@ use App\Http\Controllers\ResponsableController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/delete-filliere/{id}',[FilliereController::class,'delete_filliere']);
+Route::get('/update-filliere/{id}',[FilliereController::class,'update_filliere']);
+Route::post('/update/traitement',[FilliereController::class,'update_filliere_traitement']);
+Route::get('/filliere', [FilliereController::class,'liste_filliere' ]);
+Route::get('/ajouter',[FilliereController::class,'ajouter_filliere']);
+Route::get('/ajouter/filliere/{id}',[FilliereController::class,'ajouter_filliere']);
+Route::post('/ajouter/traitement',[FilliereController::class,'ajouter_filliere_traitement']);
 
-Route::get('/responsable',[ResponsableController::class,'liste_responsable']);
-Route::get('/ajouter',[ResponsableController::class,'ajouter_responsable']);
-Route::post('/ajouter/traitement',[ResponsableController::class,'ajouter_responsable_traitement']);
 
-Route::get('/supprimer',[ResponsableController::class,'supprimer_responsable']);
-Route::post('/modifier',[ResponsableController::class,'modifier_responsable']);
+
+
+
 
 
 
