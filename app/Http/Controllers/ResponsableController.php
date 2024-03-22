@@ -18,12 +18,15 @@ class ResponsableController extends Controller
     public function detail_responsable(string $id):View
     {
         $responsables = Responsable::find($id);
-        return view('responsable.detail',compact('responsable'));
+        return view('responsable.detail')->with('responsable', $responsables);
     }
     
-    public function delete_responsable()
+    public function delete_responsable($id)
     {
-        return view('responsable.delete');
+        $responsables = Responsable::find($id);
+         $responsables->delete();
+         return redirect('/ajout')->with('status', 'L\'apprenant a été supprimé avec succès.');
+
     }
 
 
