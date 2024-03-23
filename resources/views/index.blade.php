@@ -463,7 +463,7 @@
     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
     <div class="modal-footer">
         <button class="btn btn-secondary" type="button" data-dismiss="modal">Annuler</button>
-        <a class="btn btn-primary" href="#">Se deconnecter</a>
+        <a class="btn btn-info" href="#">Se deconnecter</a>
     </div>
 </div>
 </div>
