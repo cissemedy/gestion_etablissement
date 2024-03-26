@@ -34,7 +34,7 @@
       </ul>
 
 
-    <form action="/update/traitement" method="POST" class="form-group">
+    <form action="/updatee/traitement" method="POST" class="form-group">
       @csrf
 
       <input type="text" name="id" style="display: none;" value="{{$fillieres->id}}">

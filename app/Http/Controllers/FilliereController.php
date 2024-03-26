@@ -48,7 +48,7 @@ class FilliereController extends Controller
         $fillieres = Filliere::find($id);
         return view('filliere.update',compact('fillieres'));
     }
-    public function update_filliere_traitement(Request $request){
+    public function updatee_filliere_traitement(Request $request){
         $request->validate([
             'nom' => 'required',
             'code_numerique' => 'required',
