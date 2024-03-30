@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 // use Illuminate\Http\Response;
 use App\Models\Professeur;
+use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
 class ProfesseurController extends Controller
@@ -21,10 +22,18 @@ class ProfesseurController extends Controller
 
     public function index(): View
     {
+        $professeur = DB::table('professeurs')->count();
+        $apprenant = DB::table('apprenants')->count();
+        $responsable = DB::table('responsables')->count();
+        $filliere = DB::table('fillieres')->count();
+        $niveau = DB::table('niveaux')->count();
+        return view('index',compact('professeur','apprenant','responsable','filliere','niveau'));
+
         $professeur = Professeur::paginate(3);
             return view('professeur.index')->with('professeurs', $professeur);
 
     }
+    
 
     /**
      * Show the form for creating a new resource.

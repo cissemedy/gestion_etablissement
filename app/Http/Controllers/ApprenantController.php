@@ -22,7 +22,7 @@ class ApprenantController extends Controller
          $apprenants = Apprenant::find($id);
          return view('apprenants.detail')->with('apprenants', $apprenants);
      }
- 
+
 
     public function liste_apprenant()
     {
@@ -34,12 +34,12 @@ class ApprenantController extends Controller
     {
         return view("apprenants.ajouter");
     }
-    
-    
+
+
 
     public function ajouter_apprenant_traitement(Request $request)
     {
-       
+
         $request->validate([
             'matricule' => ['required','integer'],
             'nom' => 'required',
@@ -51,10 +51,10 @@ class ApprenantController extends Controller
             'universite_id' => 'required',
         ]);
 
-        
+
         $apprenant = new Apprenant();
 
-        
+
         $apprenant->matricule = $request->matricule;
         $apprenant->nom = $request->nom;
         $apprenant->prenom = $request->prenom;
@@ -65,7 +65,7 @@ class ApprenantController extends Controller
         $apprenant->universite_id = $request->universite_id;
         $apprenant->save();
 
-        
+
         return redirect('/ajouter')->with('status', 'L\'apprenant a été enregistré avec succès.');
     }
 
@@ -90,7 +90,7 @@ class ApprenantController extends Controller
 
         $apprenant = Apprenant::find($request->id);
 
-        
+
         $apprenant->matricule = $request->matricule;
         $apprenant->nom = $request->nom;
         $apprenant->prenom = $request->prenom;
@@ -102,7 +102,7 @@ class ApprenantController extends Controller
         $apprenant->update();
 
         return redirect('/ajouter')->with('status', 'L\'apprenant a été modifié avec succès.');
- 
+
     }
 
     public function supprimer_apprenant($id)
@@ -113,5 +113,5 @@ class ApprenantController extends Controller
 
     }
 
-    
+
 }

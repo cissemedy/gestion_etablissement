@@ -5,10 +5,7 @@ use App\Http\Controllers\ResponsableController;
 use App\Http\Controllers\NiveauController;
 use App\Http\Controllers\ApprenantController;
 use App\Http\Controllers\ProfesseurController;
-<<<<<<< HEAD
-=======
 use App\Http\Controllers\FilliereController;
->>>>>>> 7258e94de1d922f441ffe9a1c888a21969f14163
 
 /*
 |--------------------------------------------------------------------------
@@ -55,9 +52,8 @@ Route::get('/ajouter', [ApprenantController::class, 'ajouter_apprenant']);
 Route::post('/ajouter/traitement', [ApprenantController::class, 'ajouter_apprenant_traitement']);
 
 
-Route::resource("/professeur", ProfesseurController::class);
-
-
+Route::resource("/professeur", ProfesseurController::class,);
+Route::get('/professeurs', [ProfesseurController::class, 'index'])->name('professeurs');
 
 
 Route::get('/delete-niveau/{id}', [NiveauController::class, 'delete_niveau']);
