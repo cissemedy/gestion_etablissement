@@ -1,23 +1,23 @@
 @extends('layout')
 @section('container')
-    
+
 
 
 <div id="content-wrapper" class="d-flex flex-column">
 
-           
-   
-   
 
-               
+
+
+
+
     <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-       
+
         <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
         </button>
 
-      
+
         <form
             class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
@@ -31,16 +31,16 @@
             </div>
         </form>
 
-        
+
         <ul class="navbar-nav ml-auto">
 
-            
+
             <li class="nav-item dropdown no-arrow d-sm-none">
                 <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-search fa-fw"></i>
                 </a>
-                
+
                 <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                     aria-labelledby="searchDropdown">
                     <form class="form-inline mr-auto w-100 navbar-search">
@@ -58,15 +58,15 @@
                 </div>
             </li>
 
-            
+
             <li class="nav-item dropdown no-arrow mx-1">
                 <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-bell fa-fw"></i>
-                    
+
                     <span class="badge badge-danger badge-counter">3+</span>
                 </a>
-               
+
                 <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                     aria-labelledby="alertsDropdown">
                     <h6 class="dropdown-header">
@@ -109,15 +109,15 @@
                 </div>
             </li>
 
-            
+
             <li class="nav-item dropdown no-arrow mx-1">
                 <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-envelope fa-fw"></i>
-                    
+
                     <span class="badge badge-danger badge-counter">7</span>
                 </a>
-                
+
                 <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                     aria-labelledby="messagesDropdown">
                     <h6 class="dropdown-header">
@@ -177,15 +177,15 @@
 
             <div class="topbar-divider d-none d-sm-block"></div>
 
-            
+
             <li class="nav-item dropdown no-arrow">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Sam SALL</span>
                     <img class="img-profile rounded-circle"
                         src="img/undraw_profile.svg">
                 </a>
-                
+
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                     aria-labelledby="userDropdown">
                     <a class="dropdown-item" href="#">
@@ -211,33 +211,28 @@
         </ul>
 
     </nav>
-    
+
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800 col-4">Dashboard</h1>
             <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                     class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
         </div>
 
-       
+
         <div class="container">
         <div class="row">
-            
-            
+
+
             <div class="col-xl-2 col-md-2 mb-4">
                 <div class="card border-left-primary shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Professeurs</div>
-                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">20%</div>
-                                    <div class="col">
-                                        <div class="progress progress-sm mr-2">
-                                            <div class="progress-bar bg-primary" role="progressbar"
-                                                style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
+                                    Professeurs
+                                </div>
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{$professeur}}</div>
+
                             </div>
                             <div class="col-auto">
                                 <i class="	fas fa-chalkboard-teacher"></i>
@@ -256,15 +251,9 @@
                                 </div>
                                 <div class="row no-gutters align-items-center">
                                     <div class="col-auto">
-                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{$apprenant}}</div>
                                     </div>
-                                    <div class="col">
-                                        <div class="progress progress-sm mr-2">
-                                            <div class="progress-bar bg-success" role="progressbar"
-                                                style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="col-auto">
@@ -275,7 +264,7 @@
                 </div>
             </div>
 
-            
+
             <div class="col-xl-2 col-md-2 mb-4">
                 <div class="card border-left-info shadow h-100 py-2">
                     <div class="card-body">
@@ -285,15 +274,9 @@
                                 </div>
                                 <div class="row no-gutters align-items-center">
                                     <div class="col-auto">
-                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">30%</div>
+                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{$responsable}}</div>
                                     </div>
-                                    <div class="col">
-                                        <div class="progress progress-sm mr-2">
-                                            <div class="progress-bar bg-info" role="progressbar"
-                                                style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="col-auto">
@@ -315,15 +298,9 @@
                                 </div>
                                 <div class="row no-gutters align-items-center">
                                     <div class="col-auto">
-                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">40%</div>
+                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{$filliere}}</div>
                                     </div>
-                                    <div class="col">
-                                        <div class="progress progress-sm mr-2">
-                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="col-auto">
@@ -334,7 +311,7 @@
                 </div>
             </div>
 
-         
+
             <div class="col-xl-2 col-md-2 mb-4">
                 <div class="card border-left-warning shadow h-100 py-2">
                     <div class="card-body">
@@ -342,7 +319,7 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                     Niveau d'etude</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">6</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{{$niveau}}}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="	fas fa-book-open"></i>
@@ -357,16 +334,16 @@
 
 
 
-    
 
-        
+
+
     <div class="container col-20">
         <div class="row">
 
-           
+
             <div class="col-lg-12 mb-4">
 
-               
+
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
                         <h6 class="m-0 font-weight-bold text-primary">Projets</h6>
@@ -406,7 +383,7 @@
                 </div>
             </div>
 
-               
+
                 <div class="container">
                 <div class="row">
                     <div class="col-lg-6 mb-4">
@@ -450,16 +427,16 @@
                             </div>
                         </div>
                     </div>
-                   
-                </div> 
+
+                </div>
                 </div>
 
             </div>
 
             <div class="col-lg-flex mb-4">
 
-               
-                
+
+
     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
     <div class="modal-footer">
         <button class="btn btn-secondary" type="button" data-dismiss="modal">Annuler</button>
