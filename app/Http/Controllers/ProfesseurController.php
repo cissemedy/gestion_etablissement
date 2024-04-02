@@ -33,7 +33,7 @@ class ProfesseurController extends Controller
             return view('professeur.index')->with('professeurs', $professeur);
 
     }
-    
+
 
     /**
      * Show the form for creating a new resource.
