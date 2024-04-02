@@ -52,9 +52,8 @@ Route::get('/ajouter', [ApprenantController::class, 'ajouter_apprenant']);
 Route::post('/ajouter/traitement', [ApprenantController::class, 'ajouter_apprenant_traitement']);
 
 
-Route::resource("/professeur", ProfesseurController::class);
-
-
+Route::resource("/professeur", ProfesseurController::class,);
+Route::get('/professeurs', [ProfesseurController::class, 'index'])->name('professeurs');
 
 
 Route::get('/delete-niveau/{id}', [NiveauController::class, 'delete_niveau']);
