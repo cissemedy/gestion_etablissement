@@ -12,13 +12,13 @@
 @extends('layout')
 @section('container')  
 
+
 <div class="card m-2">
             <div class="card-header">
                 <a href="/filliere" class="m-2 text-black" title="">
                     <h2 class="text-center"></i></a>Details</h2><hr>
                 <div class="card-body">
                     
-               
                     <p class="card-title">Nom : {{ $fillieres->nom }}</p>
                     <p class="card-title">Code Numerique : {{ $fillieres->code_numerique }}</p>
                     <p class="card-text">Acronyme : {{ $fillieres->acronyme }}</p>

@@ -15,7 +15,7 @@ use App\Http\Controllers\FilliereController;
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
+| be assigned to the "web" middleware group. Make something great 
 |
 */
 
@@ -53,9 +53,8 @@ Route::get('/ajouter', [ApprenantController::class, 'ajouter_apprenant']);
 Route::post('/ajouter/traitement', [ApprenantController::class, 'ajouter_apprenant_traitement']);
 
 
-Route::resource("/professeur", ProfesseurController::class);
-
-
+Route::resource("/professeur", ProfesseurController::class,);
+Route::get('/professeurs', [ProfesseurController::class, 'index'])->name('professeurs');
 
 
 Route::get('/delete-niveau/{id}', [NiveauController::class, 'delete_niveau']);
