@@ -8,7 +8,8 @@ use Illuminate\View\View;
 
 class ResponsableController extends Controller
 {
-   
+
+     
     public function liste_responsable()
     {
         $responsables = Responsable::paginate(3);
