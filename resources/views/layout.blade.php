@@ -80,7 +80,7 @@
 
 
              <li class="nav-item">
-                <a class="nav-link collapsed" href="/professeur" data-toggle="collapse" data-target="#collapseUtilities"
+                <a class="nav-link collapsed" href="professeur" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-chalkboard-teacher"></i>
                     <span>Professeurs</span>

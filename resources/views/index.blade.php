@@ -181,7 +181,7 @@
             <li class="nav-item dropdown no-arrow">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Se Connecter</span>
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Sam SALL</span>
                     <img class="img-profile rounded-circle"
                         src="img/undraw_profile.svg">
                 </a>
@@ -222,7 +222,7 @@
         <div class="container">
         <div class="row">
 
-        
+
             <div class="col-xl-2 col-md-2 mb-4">
                 <div class="card border-left-primary shadow h-100 py-2">
                     <div class="card-body">
