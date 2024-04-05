@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ResponsableController;
 use App\Http\Controllers\NiveauController;
 use App\Http\Controllers\ApprenantController;
-use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfesseurController;
 use App\Http\Controllers\FilliereController;
 
@@ -82,15 +81,4 @@ Route::get('/index', function ()
 {
     return view('index');
 });
-
-//Route::get('/login', function ()
-//{
-//    return view('login');
-//});
-
-Route::get('/register', [AuthController::class, 'register'])->name('register');
-Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
-
-Route::get('/login', [AuthController::class, 'login'])->name('login');
-Route::post('/login', [AuthController::class, 'loginPost'])->name('login');
 
