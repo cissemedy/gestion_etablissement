@@ -24,12 +24,13 @@
         @endif
 
         <ul>
-          <strong>total Books</strong>
-          @foreach ($errors->all() as $error)
-            <li class="alert alert-danger"> {{ $Book }} </li>
-
-          @endforeach
-        </ul>
+          <ul>
+            @foreach($errors->all() as $error)
+              <li class="alert alert-danger"> {{$error}} </li>
+          
+            @endforeach
+          </ul>
+         
         <a href="/apprenant" class="btn btn-info  mb-3">
         Ajouter un(e) apprenant(e)
         </a>
@@ -37,7 +38,7 @@
             @csrf
            
             <div class="form-group">
-              <strong>Borrawed Books</strong>
+              
               <label for="">Matricule :</label>
               <input type="text" class="form-control" id="nom" placeholder="saisir votre nom" name="matricule">
               
@@ -50,7 +51,7 @@
           <div class="form-group">
             <label for="">Prenom :</label>
             <input type="text" class="form-control" id="" placeholder="saisir votre prenom" name="prenom">
-            <strong>returned Book</strong>
+           
           </div>
 
         </div>

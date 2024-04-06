@@ -179,7 +179,7 @@
 
 
             <li class="nav-item dropdown no-arrow">
-                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                <a class="nav-link dropdown-toggle" href="register" id="userDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="mr-2 d-none d-lg-inline text-gray-600 small">Se Connecter</span>
                     <img class="img-profile rounded-circle"
@@ -440,7 +440,7 @@
     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
     <div class="modal-footer">
         <button class="btn btn-secondary" type="button" data-dismiss="modal">Annuler</button>
-        <a class="btn btn-info" href="#">Se deconnecter</a>
+        <a class="btn btn-info" href="login">Se deconnecter</a>
     </div>
 </div>
 </div>

@@ -57,7 +57,7 @@
 
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ url('professeur') }}" data-toggle="collapse" data-target="#collapseTwo"
+                <a class="nav-link collapsed" href="{{ url('/professeur') }}" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Acceuil</span>
@@ -80,7 +80,7 @@
 
 
              <li class="nav-item">
-                <a class="nav-link collapsed" href="/professeur" data-toggle="collapse" data-target="#collapseUtilities"
+                <a class="nav-link collapsed" href="/professeur/create" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-chalkboard-teacher"></i>
                     <span>Professeurs</span>

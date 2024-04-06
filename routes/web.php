@@ -6,6 +6,7 @@ use App\Http\Controllers\NiveauController;
 use App\Http\Controllers\ApprenantController;
 use App\Http\Controllers\ProfesseurController;
 use App\Http\Controllers\FilliereController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,7 +54,7 @@ Route::post('/ajouter/traitement', [ApprenantController::class, 'ajouter_apprena
 
 
 Route::resource("/professeur", ProfesseurController::class,);
-Route::get('/professeurs', [ProfesseurController::class, 'index'])->name('professeurs');
+Route::get('/professeurs', [ProfesseurController::class, 'professeurs'])->name('professeurs');
 
 
 Route::get('/delete-niveau/{id}', [NiveauController::class, 'delete_niveau']);
@@ -82,3 +83,8 @@ Route::get('/index', function ()
     return view('index');
 });
 
+
+Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'loginPost'])->name('login');
